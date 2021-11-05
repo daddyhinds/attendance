@@ -59,7 +59,9 @@
             <small id="phoneHelp" class="form-text text-muted">We'll never share your number  with anyone else.</small>
         </div>
         
-        <button type="submit" name="submit" class="btn btn-info btn-lg" target ="_blank">Save Changes</button>
+        <a href="viewrecords.php" class="btn btn-default " >Back to List</a>
+        <button type="submit" name="submit" class="btn btn-info " >Save Changes</button>
+
 </form>
 <?php } ?>
 <br>
