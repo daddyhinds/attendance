@@ -5,8 +5,8 @@
     //$db = 'attendance_db';
     //$user ='root';
     //$pass = '';
-    //$charset = 'utf8mb4';
-    //$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+   //$charset = 'utf8mb4';
+   //$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
 
     //Remote Connection
     $host = 'remotemysql.com';

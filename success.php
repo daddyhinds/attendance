@@ -14,8 +14,15 @@
         $contact = $_POST['phone'];
         $specialty = $_POST['specialty'];
 
+        $orig_file = $_FILES["avatar"]["tmp_name"];
+        $ext = pathinfo($_FILES["avatar"]["name"], PATHINFO_EXTENSION);
+        $target_dir = 'uploads/';
+        $destination = "$target_dir$contact.$ext";
+        move_uploaded_file($orig_file,$destination);
+
+    
         //Call function to insert and track if success or not
-       $isSuccess = $crud->insertAttendees($fname, $lname, $dob, $email, $contact, $specialty) ;
+       $isSuccess = $crud->insertAttendees($fname, $lname, $dob, $email, $contact, $specialty,$destination);
        $specialtyName = $crud->getSpecialtyById($specialty);
 
        if($isSuccess){
@@ -46,7 +53,7 @@
     </div>
 -->
 <!-- This Prints out values passed to the action page using method="post" -->
-
+<img src="<?php echo $destination; ?>" class="dashboard-profile-img rounded-circle" style="width: 45%; height: 45%" />
 <div class="card" style="width: 18rem;">
         <div class="card-body">
             <h5 class="card-title"><?php echo $_POST['firstname'].' '.$_POST['lastname']; ?></h5>

@@ -14,6 +14,8 @@
     
     
     ?>
+<img src="<?php echo empty($result['avatar_path']) ? "uploads/blank.png" : $result['avatar_path'] ; ?>" class="dashboard-profile-img rounded-circle" style="width: 30%; height: 30%" />
+
 <div class="card" style="width: 18rem;">
         <div class="card-body">
             <h5 class="card-title"><?php echo $result['firstname'].' '.$result['lastname']; ?></h5>

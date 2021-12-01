@@ -18,7 +18,7 @@
         -->
     <h1 class="text-center">Registration for IT Conference</h1>
 
-    <form method="post" action="success.php">
+    <form method="post" enctype="multipart/form-data" action="success.php">
         <div class="form-group">
             <label for="firstname">First Name</label>
             <input required type="text" class="form-control" id="firstname" name="firstname" >
@@ -57,7 +57,7 @@
         </div>
              </br>
         <div class="custom-file">
-            <input type="filet" class="custom-file-input" id="avatar" name="avatar">
+            <input type="file" accept="image/*" class="custom-file-input" id="avatar" name="avatar">
             <label class="custom-file-label" for="avatar">Choose File</label>
             <small id="avatar" class="form-text text-danger">File Upload Is Optional</small>
         </div>
